@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Trivia App</title>
+  <link rel="text/stylesheet" href="resources/normalize.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,100' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="resources/animate.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+  <!-- *******************CATEGORY******************** -->
+  <div class="category animated bounceInDown"></div>
+
+  <!-- *******************TIMER******************** -->
+  <input type="text" id="output" class="answers timer"/>
+
+  <!-- *******************QUESTION******************** -->
+  <div class="question animated bounceInDown"></div>
+
+  <!-- *******************ANSWER******************** -->
+<input type="textarea" class="answers textField" placeholder="Your answer goes here!">
+
+<!-- *******************SKIP BUTTON******************** -->
+  <button class="answers skip">SKIP</button>
+
+  <!-- *******************CORRECT ANSWER******************** -->
+  <div class="correctAnswer answers"></div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script type="text/javascript" src="trivia.js"></script>
+  <script src="dom.js"></script>
+
+
+
+</body>
+
+</html>

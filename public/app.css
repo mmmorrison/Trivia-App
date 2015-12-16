@@ -1,0 +1,63 @@
+* {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  background-color: #F6F4D2;
+}
+.category {
+  border: 1px solid black;
+  margin: 0px auto;
+  width: 15vw;
+  height: 5vh;
+  text-align: center;
+  font-weight: 100;
+  font-size: 1rem;
+  padding-top: .5%;
+  margin-top: 2%;
+}
+.question {
+  border: 1px solid black;
+  height: 20vh;
+  text-align: center;
+  margin-top: 1%;
+  font-weight: 100;
+  font-size: 2.5em;
+  padding-top: 3%;
+  padding-bottom: 1%;
+}
+.timer {
+  border: 1px solid black;
+  display: block;
+  width: 15vw;
+  height: 5vh;
+  text-align: center;
+  font-weight: 100;
+  font-size: 1rem;
+  padding-top: .5%;
+  margin-top: 1%;
+}
+.answers {
+  border: 1px solid black;
+  margin: 0px auto;
+  width: 25vw;
+  height: 6vh;
+  text-align: center;
+  font-weight: 100;
+  font-size: 1rem;
+  padding-top: 1%;
+  margin-top: 1%;
+  padding-bottom: 1.5%;
+}
+.correctAnswer {
+  border: 3px solid green;
+}
+button {
+  background-color: #F6F4D2;
+  display: block;
+}
+.textField {
+  display: block;
+}
+
+.tenSeconds {
+color: red;
+}
