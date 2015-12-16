@@ -15,13 +15,13 @@ retrieveData.done(function(data) {
   $('.category').append(category);
   $(".question").append(question);
   $(".correctAnswer").append(correctAnswer);
-  $(".question").delay(10000).queue(function(next){
-    $(this).addClass("tenSeconds hinge");
+  $(".question, .category").delay(10000).queue(function(next){
+    $(this).addClass("tenSeconds");
     next();
   });
 
-  $(".category").delay(10000).queue(function(next){
-    $(this).addClass(" tenSeconds hinge");
+  $(".question, .category").delay(10000).queue(function(next){
+    $(this).addClass("hinge");
     next();
   })
 })
@@ -43,19 +43,20 @@ function newQuestion() {
     var answer = data[0]["answer"];
     var correctAnswer = data[0]["answer"];
     var category = data[0]["category"]["title"]
-    $('.category').empty().append(category);
-    $(".question").empty().append(question);
+
+    $('.category, .question').empty();
+    $(".question").append(question);
+    $(".category").append(category);
     $(".correctAnswer").empty().append(correctAnswer);
     $(".question").delay(11000).queue(function(next){
-      $(this).addClass("tenSeconds, hinge");
+      $(this).addClass("tenSeconds");
       next();
     });
 
     $(".category").delay(10000).queue(function(next){
-      $(this).addClass(" tenSeconds hinge");
+      $(this).addClass(" tenSeconds");
       next();
     })
-
   });
-
 }
+// ************************SUBMIT ANSWER*************************

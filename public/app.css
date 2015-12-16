@@ -4,7 +4,7 @@
   background-color: #F6F4D2;
 }
 .category {
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   margin: 0px auto;
   width: 15vw;
   height: 5vh;
@@ -15,7 +15,7 @@
   margin-top: 2%;
 }
 .question {
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   height: 20vh;
   text-align: center;
   margin-top: 1%;

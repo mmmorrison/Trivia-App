@@ -1,12 +1,12 @@
 $(".start-Btn").click(function() {
-  window.location = "ready2.html"
+$(this).hide();
+$(".ready-Btn, p").show();
 });
 
 $(".ready-Btn").click(function() {
   window.location = "index.html";
 });
 // ********************TIMER***************************
-
 $(document).ready(function() {
   countdown();
 });
@@ -46,3 +46,5 @@ $(".skip").click(function() {
   newQuestion();
   resetMe();
 });
+
+// ********************Next Question***************************
