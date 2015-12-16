@@ -15,27 +15,27 @@ retrieveData.done(function(data) {
   $('.category').append(category);
   $(".question").append(question);
   $(".correctAnswer").append(correctAnswer);
-  $(".question, .category").delay(10000).queue(function(next){
+  $(".question, .category").delay(10000).queue(function(next) {
     $(this).addClass("tenSeconds");
     next();
   });
 
-  $(".question, .category").delay(10000).queue(function(next){
+  $(".question, .category").delay(10000).queue(function(next) {
     $(this).addClass("hinge");
     next();
   })
 })
 
 retrieveData.fail(function(data) {
-  console.log("FAILED");
-})
-// *************************SKIP BUTTON***********************
+    console.log("FAILED");
+  })
+  // *************************SKIP BUTTON***********************
 function newQuestion() {
   var retrieveData = $.ajax({
     url: 'http://jservice.io/api/random',
     type: 'GET',
     dataType: 'json',
-})
+  })
 
   retrieveData.done(function(data) {
     console.log("NEW QUESTION SUCCESS");
@@ -48,15 +48,28 @@ function newQuestion() {
     $(".question").append(question);
     $(".category").append(category);
     $(".correctAnswer").empty().append(correctAnswer);
-    $(".question").delay(11000).queue(function(next){
+    $(".question").delay(11000).queue(function(next) {
       $(this).addClass("tenSeconds");
       next();
     });
 
-    $(".category").delay(10000).queue(function(next){
+    $(".category").delay(10000).queue(function(next) {
       $(this).addClass(" tenSeconds");
       next();
     })
   });
 }
 // ************************SUBMIT ANSWER*************************
+var guess = document.getElementById('submitAnswer').value;
+var rightAnswer = document.getElementById("rightAnswer").innerHTML;
+
+function checkAnswer() {
+  if (guess === rightAnswer) {
+  }
+}
+
+document.onkeydown = function() {
+  if (window.event.keyCode == '13') {
+    checkAnswer();
+  }
+}
