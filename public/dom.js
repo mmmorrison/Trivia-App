@@ -46,5 +46,3 @@ $(".skip").click(function() {
   newQuestion();
   resetMe();
 });
-
-// ********************Next Question***************************

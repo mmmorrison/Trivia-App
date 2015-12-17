@@ -4,7 +4,6 @@
   background-color: #F6F4D2;
 }
 .category {
-  /*border: 1px solid black;*/
   margin: 0px auto;
   width: 15vw;
   height: 5vh;
@@ -15,7 +14,6 @@
   margin-top: 2%;
 }
 .question {
-  /*border: 1px solid black;*/
   height: 20vh;
   text-align: center;
   margin-top: 1%;
@@ -23,6 +21,7 @@
   font-size: 2.5em;
   padding-top: 3%;
   padding-bottom: 1%;
+  margin-bottom: 7%;
 }
 .timer {
   border: 1px solid black;
@@ -48,7 +47,7 @@
   padding-bottom: 1.5%;
 }
 .correctAnswer {
-  border: 3px solid green;
+  visibility: hidden;
 }
 button {
   background-color: #F6F4D2;
@@ -57,7 +56,18 @@ button {
 .textField {
   display: block;
 }
-
 .tenSeconds {
-color: red;
+  color: red;
+}
+.score {
+  border: 1px solid black;
+  margin: 0px auto;
+  width: 25vw;
+  height: 6vh;
+  text-align: center;
+  font-weight: 100;
+  font-size: 1rem;
+  padding-top: 1%;
+  margin-top: 1%;
+  padding-bottom: 1.5%;
 }

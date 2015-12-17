@@ -15,19 +15,23 @@
   <div class="category animated bounceInDown"></div>
 
   <!-- *******************TIMER******************** -->
-  <input type="text" id="output" class="answers timer"/>
+  <input type="text" id="output" class="answers timer" />
 
   <!-- *******************QUESTION******************** -->
   <div class="question animated bounceInDown"></div>
 
-  <!-- *******************ANSWER******************** -->
-<input type="textarea" class="answers textField" id="submitAnswer" placeholder="Your answer goes here!">
+  <!-- *******************GUESS******************** -->
+  <form id="submitAnswer">
+  <input type="text" id="guess" class="answers textField" placeholder="Your answer goes here!">
+</form>
 
-<!-- *******************SKIP BUTTON******************** -->
+  <!-- *******************SKIP BUTTON******************** -->
   <button class="answers skip">SKIP</button>
 
   <!-- *******************CORRECT ANSWER******************** -->
   <div class="correctAnswer answers" id="rightAnswer"></div>
+  <!-- *******************CORRECT ANSWER******************** -->
+<div class="score"></div>
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>

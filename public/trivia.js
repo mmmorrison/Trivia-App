@@ -19,11 +19,26 @@ retrieveData.done(function(data) {
     $(this).addClass("tenSeconds");
     next();
   });
+})
 
-  $(".question, .category").delay(10000).queue(function(next) {
-    $(this).addClass("hinge");
-    next();
-  })
+$(".question, .category").delay(10000).queue(function(next) {
+  $(this).addClass("hinge");
+  next();
+})
+
+
+// ***************************CHECK ANSWER****************************
+$('form').on('submit', function(e) {
+  var guess = document.getElementById('guess').value;
+  var theCorrectAnswer = document.getElementById('rightAnswer').innerHTML;
+  var answerBox = document.getElementById('rightAnswer');
+  e.preventDefault();
+
+  if (guess == theCorrectAnswer) {
+    alert("right")
+  } else {
+    answerBox.style.visibility = 'visible';
+  }
 })
 
 retrieveData.fail(function(data) {
@@ -57,19 +72,5 @@ function newQuestion() {
       $(this).addClass(" tenSeconds");
       next();
     })
-  });
-}
-// ************************SUBMIT ANSWER*************************
-var guess = document.getElementById('submitAnswer').value;
-var rightAnswer = document.getElementById("rightAnswer").innerHTML;
-
-function checkAnswer() {
-  if (guess === rightAnswer) {
-  }
-}
-
-document.onkeydown = function() {
-  if (window.event.keyCode == '13') {
-    checkAnswer();
-  }
+  })
 }
