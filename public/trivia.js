@@ -21,10 +21,10 @@ retrieveData.done(function(data) {
   });
 })
 
-$(".question, .category").delay(10000).queue(function(next) {
-  $(this).addClass("hinge");
-  next();
-})
+// $(".question, .category").delay(10000).queue(function(next) {
+//   $(this).addClass("hinge");
+//   next();
+// })
 
 
 // ***************************CHECK ANSWER****************************
@@ -35,12 +35,15 @@ $('form').on('submit', function(e) {
   e.preventDefault();
 
   if (guess == theCorrectAnswer) {
-    alert("right")
+    var count = 0;
+    count++;
+    $('#score').html("Score: " +count);
+    newQuestion();
   } else {
     answerBox.style.visibility = 'visible';
+    newQuestion()
   }
 })
-
 retrieveData.fail(function(data) {
     console.log("FAILED");
   })
@@ -68,9 +71,9 @@ function newQuestion() {
       next();
     });
 
-    $(".category").delay(10000).queue(function(next) {
-      $(this).addClass(" tenSeconds");
-      next();
-    })
+    // $(".category").delay(10000).queue(function(next) {
+    //   $(this).addClass(" tenSeconds");
+    //   next();
+    // })
   })
 }

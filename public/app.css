@@ -47,7 +47,7 @@
   padding-bottom: 1.5%;
 }
 .correctAnswer {
-  visibility: hidden;
+  /*visibility: hidden;*/
 }
 button {
   background-color: #F6F4D2;
@@ -59,7 +59,7 @@ button {
 .tenSeconds {
   color: red;
 }
-.score {
+#score {
   border: 1px solid black;
   margin: 0px auto;
   width: 25vw;
