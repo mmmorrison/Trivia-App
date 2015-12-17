@@ -16,10 +16,10 @@ var x;
 var isTimerOn = false;
 
 function countdown() {
-  document.getElementById('output').value = counter;
+  document.getElementById('output').value = "time left: " + counter;
   counter--;
   x = setTimeout("countdown();", 1000);
-  if (counter == -1) {
+  if (counter == 0) {
     resetMe();
   }
 };

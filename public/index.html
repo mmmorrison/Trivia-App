@@ -14,16 +14,19 @@
   <!-- *******************CATEGORY******************** -->
   <div class="category animated bounceInDown"></div>
 
+  <!-- *******************VALUE******************** -->
+  <div class="valued animated bounceInDown"></div>
+
   <!-- *******************TIMER******************** -->
-  <input type="text" id="output" class="answers timer" />
+  <input type="text" id="output" class="answers timer animated bounceInDown"/>
 
   <!-- *******************QUESTION******************** -->
   <div class="question animated bounceInDown"></div>
 
   <!-- *******************GUESS******************** -->
   <form id="submitAnswer">
-  <input type="text" id="guess" class="answers textField" placeholder="Your answer goes here!">
-</form>
+    <input type="text" id="guess" class="answers textField" placeholder="Your answer goes here!">
+  </form>
 
   <!-- *******************SKIP BUTTON******************** -->
   <button class="answers skip">SKIP</button>
@@ -31,8 +34,9 @@
   <!-- *******************CORRECT ANSWER******************** -->
   <div class="correctAnswer answers" id="rightAnswer"></div>
   <!-- *******************CORRECT ANSWER******************** -->
-<div id="score"></div>
+  <div class="animated flipInX" id="score"></div>
 
+  <!-- ************************SCRIPTS****************************** -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script type="text/javascript" src="trivia.js"></script>
   <script src="dom.js"></script>
