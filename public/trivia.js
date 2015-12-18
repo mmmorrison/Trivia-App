@@ -13,40 +13,34 @@ retrieveData.done(function(data) {
   var correctAnswer = data[0]["answer"];
   var category = data[0]["category"]["title"];
   // **********************APPENDS QUESTION & CATEGORY***************************
-  $('.category').append("category: " + category.toUpperCase());
+  $('.category').append(category.toUpperCase());
+  $(".correctAnswer").append(correctAnswer);
   $('.valued').append("points: " + valuedAt);
   $(".question").append(question);
-  $(".correctAnswer").append(correctAnswer);
-  $(".question, .category .output").delay(10000).queue(function(next) {
-    $(this).addClass("tenSeconds");
-    next();
-  });
 })
 
-// $(".question, .category").delay(10000).queue(function(next) {
-//   $(this).addClass("hinge");
-//   next();
-// })
 
 // ***************************CHECK ANSWER & SCORE****************************
 $('form').on('submit', function(e) {
+  // var rightQuestion = document.getElementsByClassName('question');
   var guess = document.getElementById('guess').value;
   var theCorrectAnswer = document.getElementById('rightAnswer').innerHTML;
-  var answerBox = document.getElementById('rightAnswer');
+  var answerBox = document.getElementById('rightAnswer').innerHTML;
   var points = document.getElementsByClassName('valued');
   e.preventDefault();
-
-  if (guess == theCorrectAnswer) {
-    var count = 0;
-    count++;
-    $('#score').html("Score: " + count);
-    newQuestion()
-  } else {
-    answerBox.style.visibility = 'visible';
+$(document).ready(function(){
+  if (guess.toLowerCase == theCorrectAnswer.toLowerCase) {
+    var score = 0;
+    score++
+    $("#score").html(score);
+  } if (guess.toLowerCase == theCorrectAnswer.toLowerCase) {
+    $('#rightAnswer').show().fadeOut(2000);
   }
-});
-
-
+  // *******************CLEARS INPUT FIELD******************************
+  document.getElementById("guess").value = '';
+  newQuestion();
+})
+})
 retrieveData.fail(function(data) {
     console.log("FAILED");
   })
@@ -66,18 +60,12 @@ function newQuestion() {
     var correctAnswer = data[0]["answer"];
     var category = data[0]["category"]["title"];
 
-// *********************EMPTY DIVS**************************
+    // *********************EMPTY DIVS**************************
     $(".correctAnswer").empty().append(correctAnswer);
     $('.category, .question, .valued').empty();
-
     // *********************APPEND NEW QUESTION*********************
     $(".question").append(question);
     $('.valued').append("points: " + valuedAt);
-    $('.category').append("category: " + category.toUpperCase());
-
-    $(".question").delay(11000).queue(function(next) {
-      $(this).addClass("tenSeconds");
-      next();
-    });
+    $('.category').append(category.toUpperCase());
   })
 }

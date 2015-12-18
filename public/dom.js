@@ -46,3 +46,7 @@ $(".skip").click(function() {
   newQuestion();
   resetMe();
 });
+// ************************SHOW/HIDE CORRECT ANSWER*****************
+function hideAnswer() {
+  $("#rightAnswer").hide()
+}
