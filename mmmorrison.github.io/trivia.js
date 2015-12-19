@@ -34,7 +34,7 @@ $(document).ready(function(){
     score++
     $("#score").html(score);
   } if (guess.toLowerCase == theCorrectAnswer.toLowerCase) {
-    $('#rightAnswer').show().fadeOut(2000);
+    $('#rightAnswer').show().fadeOut();
   }
   // *******************CLEARS INPUT FIELD******************************
   document.getElementById("guess").value = '';

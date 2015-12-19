@@ -4,7 +4,7 @@ $(".ready-Btn, p").show();
 });
 
 $(".ready-Btn").click(function() {
-  window.location = "index.html";
+  window.location = "main.html";
 });
 // ********************TIMER***************************
 $(document).ready(function() {
@@ -47,6 +47,6 @@ $(".skip").click(function() {
   resetMe();
 });
 // ************************SHOW/HIDE CORRECT ANSWER*****************
-function hideAnswer() {
-  $("#rightAnswer").hide()
-}
+// function hideAnswer() {
+//   $("#rightAnswer").hide()
+// }
