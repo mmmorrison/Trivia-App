@@ -1,2 +1,2 @@
 # g18-Maria-Morrison
-Jeopardy First Quarter Project: http://mmmorrison.github.io/
+Jeopardy First Quarter Project: http://mmmorrison.github.io/Trivia-App
