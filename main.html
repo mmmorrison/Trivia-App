@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Trivia App</title>
+  <link rel="text/stylesheet" href="resources/normalize.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,100' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="resources/animate.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+  <!-- *******************SCORE******************** -->
+  <div class="animated" id="score">Score: <span>000</span></div>
+
+  <!-- *******************CATEGORY******************** -->
+  <div class="category animated bounceInDown"></div>
+
+  <!-- *******************VALUE******************** -->
+  <div class="valued animated bounceInDown"></div>
+
+  <!-- *******************TIMER******************** -->
+  <input type="text" id="output" class="answers timer animated bounceInDown" />
+
+  <!-- *******************QUESTION******************** -->
+  <div class="question animated bounceInDown"></div>
+
+  <!-- *******************GUESS******************** -->
+  <form id="submitAnswer">
+    <input type="text" id="guess" class="answers textField" placeholder="Your answer goes here!">
+  </form>
+
+  <!-- *******************SKIP BUTTON******************** -->
+  <button class="answers skip">SKIP</button>
+
+  <!-- *******************CORRECT ANSWER******************** -->
+  <div class="correctAnswer answers" id="rightAnswer"></div>
+  <!-- ************************SCRIPTS****************************** -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script type="text/javascript" src=resources/jquery-2.1.4.min.js></script>
+  <script type="text/javascript" src="trivia.js"></script>
+  <script src="dom.js"></script>
+
+
+</body>
+
+</html>
