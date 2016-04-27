@@ -1,0 +1,25 @@
+@font-face {
+    font-family: gyparody;
+    src: url(gyparody/gyparody.ttf);
+}
+* {
+    font-family: 'gyparody', 'Roboto', sans-serif;
+    box-sizing: border-box;
+    background-color: #060CE9;
+}
+.start {
+    text-align: center;
+    position: absolute;
+    font-size: 3em;
+    top: 50%;
+    left: 40%;
+}
+a {
+    text-decoration: none;
+    color: #A4DFDA;
+}
+h1 {
+    text-align: center;
+    font-weight: lighter;
+    color: #F6F4D2;
+}

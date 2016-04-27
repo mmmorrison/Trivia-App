@@ -30,21 +30,16 @@ button {
     color: #020B22;
 }
 p {
-    margin: 0px auto;
+    /*margin: 0px auto;*/
     padding-top: 2%;
     text-align: center;
     font-size: 2em;
     font-weight: 100;
-    display: none;
     color: #F6F4D2;
-}
-.ready-Btn {
-    display: none;
 }
 a {
     text-decoration: none;
     color: #A4DFDA;
-    font-family: 'gyparody'
 }
 h1 {
     text-align: center;
@@ -52,9 +47,8 @@ h1 {
     color: #F6F4D2;
 }
 .start {
-    text-align: center;
     position: absolute;
     font-size: 3em;
     top: 50%;
-    left: 40%;
+    left: 50%;
 }

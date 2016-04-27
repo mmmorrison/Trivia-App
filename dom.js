@@ -1,12 +1,12 @@
-$(".start-Btn").click(function() {
-    $(this).hide();
-    $(".ready-Btn, p").show();
-});
+// *******************READY SET GO *************************
 
-$(".ready-Btn").click(function() {
-    window.location = "main.html";
-});
-// ********************TIMER***************************
+
+
+
+
+
+
+// *******************TIMER***************************
 $(document).ready(function() {
     countdown();
 });
