@@ -1,7 +1,16 @@
 // *******************READY SET GO *************************
+$(document).ready(function() {
+    $(".ready").delay(2000).fadeOut("slow");
+    var $ready = $(".ready");
+    if ($ready.is(":visible")) {
+        return;
+    }
+    $ready.show();
+    setTimeout(function() {
+        $div2.hide();
+    }, 10000);
 
-
-
+});
 
 
 
