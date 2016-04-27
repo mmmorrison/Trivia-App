@@ -6,7 +6,6 @@ var retrieveData = $.ajax({
 });
 
 retrieveData.done(function(data) {
-  console.log("SUCCESS");
   var valuedAt = data[0]["value"];
   var question = data[0]["question"];
   var answer = data[0]["answer"];
