@@ -1,8 +1,22 @@
+@font-face {
+    font-family: gyparody;
+    src: url(gyparody/gyparody.ttf);
+}
 * {
+    font-family: 'gyparody', 'Roboto', sans-serif;
+    box-sizing: border-box;
+    background-color: #060CE9;
+}
+h1{
+  text-align: center;
+   font-size: 3em;
+}
+
+/** {
   font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
   background-color: #F6F4D2;
-}
+}*/
 .answers {
   border: 1px solid black;
   margin: 0px auto;
