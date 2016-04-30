@@ -1,15 +1,31 @@
 .one{
   height: 100vh;
-  width: 20vw;
+  width: 19.7vw;
   background-color: #060CE9;
+  float: left;
 }
 .two{
   height: 100vh;
-  width: 20vw;
+  width: 19.7vw;
   background-color: #A4DFDA;
+  float: left;
 }
 .three{
   height: 100vh;
-  width: 20vw;
+  width: 19.7vw;
   background-color: #020B22;
+  float: left;
+}
+
+.four{
+  height: 100vh;
+  width: 19.7vw;
+  background-color: #030F45;
+  float: left;
+}
+.five{
+  height: 100vh;
+  width: 19.7vw;
+  background-color: #ECA400;
+  float: left;
 }
