@@ -1,0 +1,109 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    background-color: #060CE9;
+}
+.category, .valued, #points{
+    margin: 0px auto;
+    width: 55vw;
+    height: 5vh;
+    text-align: center;
+    font-weight: 100;
+    font-size: 3vh;
+    padding-top: .5%;
+    color: #fff;
+}
+
+.question {
+    height: 40vh;
+    text-align: center;
+    margin-top: 1%;
+    font-weight: 100;
+    font-size: 2.5em;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-bottom: 1%;
+    font-size: 4vw;
+}
+.timer {
+    border: 1px solid black;
+    display: block;
+    width: 15vw;
+    height: 5vh;
+    text-align: center;
+    font-weight: 100;
+    font-size: 1rem;
+    padding-top: .5%;
+    margin-top: 1%;
+}
+.answers {
+    margin: 0px auto;
+    width: 25vw;
+    height: 6vh;
+    text-align: center;
+    font-weight: 100;
+    font-size: 1rem;
+    padding-top: 1%;
+    margin-top: 1%;
+    padding-bottom: 1.5%;
+}
+.correctAnswer {
+    /*visibility: hidden;*/
+    position: relative;
+    top: 50px;
+    display: none;
+}
+button {
+    display: block;
+    max-width: 25%;
+    position: relative;
+    top: 50px;
+}
+.textField {
+    display: block;
+    max-width: 25%;
+    position: relative;
+    top: 50px;
+    font-size: 2vh;
+}
+.tenSeconds {
+    color: red;
+}
+#score {
+    margin: 0px auto;
+    width: 25vw;
+    height: 6vh;
+    text-align: center;
+    font-weight: 100;
+    font-size: 1rem;
+    padding-top: 1%;
+    padding-bottom: 1.5%;
+    position: relative;
+    color: #ECA400;
+}
+input[type="text"] {
+    border: none;
+}
+#guess {
+    border: 1px solid black;
+}
+.guessedRight {
+    color: green;
+}
+
+/*#points{
+  top: 20%;
+  left: 50%;
+  width: 5vw;
+  margin: 0 auto;
+  margin-left: 15%;
+}
+.valued {
+    width: 15%;
+    float: left;
+    left: 50px;
+    top: 20%;
+    left: 20%;
+    color: #ECA400;
+    float: left;
+}*/
