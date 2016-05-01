@@ -90,20 +90,3 @@ input[type="text"] {
 .guessedRight {
     color: green;
 }
-
-/*#points{
-  top: 20%;
-  left: 50%;
-  width: 5vw;
-  margin: 0 auto;
-  margin-left: 15%;
-}
-.valued {
-    width: 15%;
-    float: left;
-    left: 50px;
-    top: 20%;
-    left: 20%;
-    color: #ECA400;
-    float: left;
-}*/
