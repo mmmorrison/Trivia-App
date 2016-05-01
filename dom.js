@@ -1,20 +1,13 @@
 // *******************READY SET GO *************************
-var openAfter = 1000;
 $(document).ready(function() {
   $(".ready").show().delay(2000).fadeOut().queue(function() {
     $(".set").show().delay(2000).fadeOut().queue(function() {
       window.setTimeout(function() {
     window.location.href = 'main.html';
-}, 1000);
+      }, 1000);
     })
   })
 });
-
-
-
- //Your delay in milliseconds
-
-
 
 // *******************TIMER***************************
 $(document).ready(function() {
