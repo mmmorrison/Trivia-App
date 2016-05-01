@@ -11,6 +11,7 @@
     font-weight: 100;
     font-size: 3vh;
     padding-top: .5%;
+    color: #fff;
 }
 .question {
     height: 40vh;
@@ -77,6 +78,7 @@ button {
     padding-top: 1%;
     padding-bottom: 1.5%;
     position: relative;
+    color: #ECA400;
 }
 input[type="text"] {
     border: none;
@@ -86,4 +88,7 @@ input[type="text"] {
 }
 .guessedRight {
     color: green;
+}
+.valued{
+  color: #ECA400;
 }

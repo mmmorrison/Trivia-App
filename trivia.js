@@ -11,8 +11,11 @@ retrieveData.done(function(data) {
   var answer = data[0]["answer"];
   var correctAnswer = data[0]["answer"];
   var category = data[0]["category"]["title"];
-  var points = data[0]['value']
 
+// console.log(data[0].value);
+if (valuedAt == null){
+  newQuestion()
+}
   // **********************APPENDS QUESTION & CATEGORY***************************
   $('.category').append(category.toUpperCase());
   $(".correctAnswer").append(correctAnswer);
@@ -54,7 +57,6 @@ function newQuestion() {
   })
 
   retrieveData.done(function(data) {
-    console.log("NEW QUESTION SUCCESS");
     var valuedAt = data[0]["value"];
     var question = data[0]["question"];
     var answer = data[0]["answer"];
