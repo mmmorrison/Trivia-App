@@ -6,43 +6,49 @@ var retrieveData = $.ajax({
 });
 
 retrieveData.done(function(data) {
+  var score = 0;
   var valuedAt = data[0]["value"];
   var question = data[0]["question"];
   var answer = data[0]["answer"];
   var correctAnswer = data[0]["answer"];
   var category = data[0]["category"]["title"];
+  var theCorrectAnswer = document.getElementById('rightAnswer').innerHTML;
 
-if (valuedAt == null){
-  newQuestion()
-}
+  if (valuedAt === null){
+    newQuestion()
+    console.log('points are null');
+  }
   // **********************APPENDS QUESTION & CATEGORY***************************
   $('.category').append(category.toUpperCase());
   $(".correctAnswer").append(correctAnswer);
-  $('.valued').append("points: " + valuedAt);
+  $('#points').append(valuedAt);
   $(".question").append(question);
-})
+
+});
 
 
 // ***************************CHECK ANSWER & SCORE****************************
 $('form').on('submit', function(e) {
-  // var rightQuestion = document.getElementsByClassName('question');
   var guess = document.getElementById('guess').value;
   var theCorrectAnswer = document.getElementById('rightAnswer').innerHTML;
   var answerBox = document.getElementById('rightAnswer').innerHTML;
   var points = document.getElementsByClassName('valued');
+
   e.preventDefault();
-$(document).ready(function(){
-  if (guess.toLowerCase == theCorrectAnswer.toLowerCase) {
-    var score = 0;
-    score++
-    $("#score").html(score);
-  } if (guess.toLowerCase == theCorrectAnswer.toLowerCase) {
-    $('#rightAnswer').show().fadeOut();
+
+  $(document).ready(function(){
+    if (guess.toLowerCase === theCorrectAnswer.toLowerCase) {
+      rightWrong()
+      score+= points;
+  } else {
+    if (guess.toLowerCase !== theCorrectAnswer.toLowerCase) {
+      $('#rightAnswer').show();
   }
+}
   // *******************CLEARS INPUT FIELD******************************
   document.getElementById("guess").value = '';
   newQuestion();
-})
+  })
 })
 retrieveData.fail(function(data) {
     console.log("FAILED");
@@ -64,10 +70,10 @@ function newQuestion() {
 
     // *********************EMPTY DIVS**************************
     $(".correctAnswer").empty().append(correctAnswer);
-    $('.category, .question, .valued').empty();
+    $('.category, .question, #points').empty();
     // *********************APPEND NEW QUESTION*********************
     $(".question").append(question);
-    $('.valued').append("points: " + valuedAt);
+    $('#points').append(valuedAt);
     $('.category').append(category.toUpperCase());
   })
 }

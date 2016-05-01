@@ -51,8 +51,9 @@ function resetMe() {
 };
 // **********************SKIP*****************************
 $(".skip").click(function() {
-    newQuestion();
-    resetMe();
+  stopMe()
+  newQuestion()
+  resetMe()
 });
 // ************************SHOW/HIDE CORRECT ANSWER*****************
 // function hideAnswer() {
@@ -75,10 +76,10 @@ function newQuestion() {
 
     // *********************EMPTY DIVS**************************
     $(".correctAnswer").empty().append(correctAnswer);
-    $('.category, .question, .valued').empty();
+    $('.category, .question, #points').empty();
     // *********************APPEND NEW QUESTION*********************
     $(".question").append(question);
-    $('.valued').append("points: " + valuedAt);
+    $('#points').append(valuedAt);
     $('.category').append(category.toUpperCase());
   })
 }
