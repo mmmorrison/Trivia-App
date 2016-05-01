@@ -26,6 +26,8 @@ function countdown() {
     x = setTimeout("countdown();", 1000);
     if (counter == 0) {
         resetMe();
+        newQuestion();
+        console.log('counter is at 0');
     }
 };
 
@@ -55,3 +57,27 @@ $(".skip").click(function() {
 // function hideAnswer() {
 //   $("#rightAnswer").hide()
 // }
+// **************************GET NEW QUESTION WHEN TIMER IS AT ZERO***********************
+function newQuestion() {
+  var retrieveData = $.ajax({
+    url: 'http://jservice.io/api/random',
+    type: 'GET',
+    dataType: 'json',
+  })
+
+  retrieveData.done(function(data) {
+    var valuedAt = data[0]["value"];
+    var question = data[0]["question"];
+    var answer = data[0]["answer"];
+    var correctAnswer = data[0]["answer"];
+    var category = data[0]["category"]["title"];
+
+    // *********************EMPTY DIVS**************************
+    $(".correctAnswer").empty().append(correctAnswer);
+    $('.category, .question, .valued').empty();
+    // *********************APPEND NEW QUESTION*********************
+    $(".question").append(question);
+    $('.valued').append("points: " + valuedAt);
+    $('.category').append(category.toUpperCase());
+  })
+}

@@ -12,7 +12,6 @@ retrieveData.done(function(data) {
   var correctAnswer = data[0]["answer"];
   var category = data[0]["category"]["title"];
 
-// console.log(data[0].value);
 if (valuedAt == null){
   newQuestion()
 }
