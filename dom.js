@@ -1,17 +1,18 @@
 // *******************READY SET GO *************************
+var openAfter = 1000;
 $(document).ready(function() {
-    $(".ready").delay(2000).fadeOut("slow");
-    var $ready = $(".ready");
-    if ($ready.is(":visible")) {
-        return;
-    }
-    $ready.show();
-    setTimeout(function() {
-        $div2.hide();
-    }, 10000);
-
+  $(".ready").show().delay(2000).fadeOut().queue(function() {
+    $(".set").show().delay(2000).fadeOut().queue(function() {
+      window.setTimeout(function() {
+    window.location.href = 'main.html';
+}, 1000);
+    })
+  })
 });
 
+
+
+ //Your delay in milliseconds
 
 
 
