@@ -24,10 +24,10 @@ function countdown() {
     document.getElementById('output').value = "time left: " + counter;
     counter--;
     x = setTimeout("countdown();", 1000);
-    if (counter == 0) {
-        resetMe();
-        newQuestion();
-        console.log('counter is at 0');
+    if (counter == -0) {
+      stopMe()
+      newQuestion()
+      resetMe()
     }
 };
 
@@ -47,6 +47,7 @@ function resetMe() {
     isTimerOn = false;
     counter = 20;
     document.getElementById("output").innerHTML = 20;
+    startMe();
 };
 // **********************SKIP*****************************
 $(".skip").click(function() {
@@ -57,7 +58,7 @@ $(".skip").click(function() {
 // function hideAnswer() {
 //   $("#rightAnswer").hide()
 // }
-// **************************GET NEW QUESTION WHEN TIMER IS AT ZERO***********************
+// **************************GETS NEW QUESTION WHEN TIMER IS AT ZERO***********************
 function newQuestion() {
   var retrieveData = $.ajax({
     url: 'http://jservice.io/api/random',
