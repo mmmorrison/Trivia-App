@@ -47,11 +47,22 @@ h1 {
     color: #F6F4D2;
 }
 .start {
-    position: absolute;
-    font-size: 3em;
-    top: 50%;
-    left: 50%;
+  position: absolute;
+  font-size: 3em;
+  top: 50%;
+  left: 45%;
 }
 .set{
   display: none;
+  position: absolute;
+  font-size: 2em;
+  top: 50%;
+  left: 45%;
+}
+.go{
+  display: none;
+  position: absolute;
+  font-size: 3em;
+  top: 50%;
+  left: 45%;
 }

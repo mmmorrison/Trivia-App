@@ -2,9 +2,11 @@
 $(document).ready(function() {
   $(".ready").show().delay(2000).fadeOut().queue(function() {
     $(".set").show().delay(2000).fadeOut().queue(function() {
-      window.setTimeout(function() {
-    window.location.href = 'main.html';
-      }, 1000);
+      $(".go").show().delay(2000).fadeOut().queue(function() {
+        window.setTimeout(function() {
+          window.location.href = 'main.html';
+            }, 1000);
+      })
     })
   })
 });
