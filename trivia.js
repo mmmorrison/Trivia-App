@@ -7,12 +7,16 @@ var retrieveData = $.ajax({
 
 retrieveData.done(function(data) {
   var score = 0;
+  var total = 0;
   var valuedAt = data[0]["value"];
   var question = data[0]["question"];
   var answer = data[0]["answer"];
   var correctAnswer = data[0]["answer"];
   var category = data[0]["category"]["title"];
   var theCorrectAnswer = document.getElementById('rightAnswer').innerHTML;
+
+  console.log(answer);
+
 
   if (valuedAt === null){
     newQuestion()
@@ -33,13 +37,16 @@ $('form').on('submit', function(e) {
   var theCorrectAnswer = document.getElementById('rightAnswer').innerHTML;
   var answerBox = document.getElementById('rightAnswer').innerHTML;
   var points = document.getElementsByClassName('valued');
-
+  var score = document.getElementById('valued').innerHTML;
+  var somePoints = document.getElementById('points').innerHTML;
   e.preventDefault();
+
 
   $(document).ready(function(){
     if (guess.toLowerCase === theCorrectAnswer.toLowerCase) {
-      rightWrong()
-      score+= points;
+      total = somePoints + score;
+      $('#score').append(total);
+
   } else {
     if (guess.toLowerCase !== theCorrectAnswer.toLowerCase) {
       $('#rightAnswer').show();
