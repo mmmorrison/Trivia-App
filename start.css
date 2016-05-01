@@ -1,28 +1,4 @@
-<<<<<<< HEAD
 @font-face {
-<<<<<<< HEAD
-    font-family: gyparody;
-    src: url(gyparody/gyparody.ttf);
-}
-* {
-    font-family: 'gyparody', 'Roboto', sans-serif;
-    box-sizing: border-box;
-    background-color: #060CE9;
-}
-h1{
-  text-align: center;
-   font-size: 4xem;
-   background: -webkit-linear-gradient(#FAE9CE, #E1925C);
-   -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent;
-}
-
-/** {
-  font-family: 'Roboto', sans-serif;
-  box-sizing: border-box;
-  background-color: #F6F4D2;
-}*/
-=======
   font-family: gyparody;
   src: url(gyparody/gyparody.ttf);
 }
@@ -31,22 +7,10 @@ h1{
   box-sizing: border-box;
   background-color: #060CE9;
 }
->>>>>>> attempt2
 .answers {
   border: 1px solid black;
   margin: 0px auto;
   width: 10vw;
-=======
-* {
-  font-family: 'Roboto', sans-serif;
-  box-sizing: border-box;
-  background-color: #F6F4D2;
-}
-.answers {
-  border: 1px solid black;
-  margin: 0px auto;
-  width: 25vw;
->>>>>>> moved files
   height: 6vh;
   text-align: center;
   font-weight: 100;
@@ -56,31 +20,20 @@ h1{
   padding-bottom: 1.5%;
 }
 button {
-<<<<<<< HEAD
   background-color: #A4DFDA;
-=======
-  background-color: #F6F4D2;
->>>>>>> moved files
   display: block;
   position: relative;
   top: 200px;
   border-radius: 20px;
   outline: none;
-<<<<<<< HEAD
   font-weight: bold;
   color: #020B22;
 }
 p {
-=======
-}
-p {
-  margin: 0px auto;
->>>>>>> moved files
   padding-top: 2%;
   text-align: center;
   font-size: 2em;
   font-weight: 100;
-<<<<<<< HEAD
   color: #F6F4D2;
 }
 a {
@@ -113,11 +66,4 @@ h1{
   font-size: 3em;
   top: 50%;
   left: 45%;
-=======
-  display: none;
-}
-
-.ready-Btn {
-  display: none;
->>>>>>> moved files
 }
